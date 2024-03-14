@@ -1,0 +1,26 @@
+<table class="table" *ngIf="countries.length !== 0">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Icon</th>
+      <th scope="col">Bandera</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Capital</th>
+      <th scope="col">Población</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of countries; index as i;">
+      <th scope="row">{{i +1}}</th>
+      <td>{{country.flag}}</td>
+      <td><img [src]="country.flags.svg" alt="${{country.name.common}}" style="width: 30px;"></td>
+      <td>{{country.name.common}}</td>
+      <td>{{country.capital}}</td>
+      <td>{{country.population}}</td>
+      <td><a href="#">Info</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="countries.length === 0" class="alert alert-warning text-center">No hay resultados</div>

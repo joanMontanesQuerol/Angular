@@ -1,0 +1,24 @@
+<ng-template #loading>
+  <div class="alert alert-info m-5 text-center">
+    Loading
+  </div>
+</ng-template>
+
+<div *ngIf="country; else loading">
+  <h2 class="pt-3">País: <strong>{{country.name.common}}</strong></h2>
+  <hr>
+  <div class="row">
+    <div class="col col-md-3">
+      <h4>Bandera</h4>
+      <img [src]="country.flags.svg" alt="img bandera" style="width: 200px;">
+
+    </div>
+    <div class="col">
+      <h4>Información</h4>
+      <ul class="list-group">
+        <li class="list-group-item"><strong>Población:</strong> {{country.population}}</li>
+        <li class="list-group-item"><strong>Código:</strong> {{country.cca2}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
