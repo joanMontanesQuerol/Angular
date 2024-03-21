@@ -4,7 +4,7 @@
   </div>
 </ng-template>
 
-<div *ngIf="country; else loading">
+<div *ngIf="country; else loading" class="col">
   <h2 class="pt-3">País: <strong>{{country.name.common}}</strong></h2>
   <hr>
   <div class="row">
@@ -16,9 +16,17 @@
     <div class="col">
       <h4>Información</h4>
       <ul class="list-group">
-        <li class="list-group-item"><strong>Población:</strong> {{country.population}}</li>
+        <li class="list-group-item"><strong>Población:</strong> {{country.population | number}}</li>
         <li class="list-group-item"><strong>Código:</strong> {{country.cca2}}</li>
       </ul>
     </div>
+  </div>
+  <div class="row mt-2">
+    <h4>Traducciones</h4>
+      <div class="d-flex flex-wrap">
+        <span *ngFor="let translation of country.translations| keyvalue" class="badge bg-primary m-1">
+          {{country.translations[translation.key].common}}</span>
+
+      </div>
   </div>
 </div>

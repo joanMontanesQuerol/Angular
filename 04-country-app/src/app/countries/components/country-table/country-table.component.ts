@@ -1,6 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Country } from '../../interfaces/country';
+import { Country } from '../../interfaces/country.interface';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CountriesService } from '../../services/countries.service';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'country-table',
@@ -8,8 +11,6 @@ import { DomSanitizer } from '@angular/platform-browser';
   styles: ``
 })
 export class CountryTableComponent {
-
-
   @Input()
   public countries: Country[] = [];
 
