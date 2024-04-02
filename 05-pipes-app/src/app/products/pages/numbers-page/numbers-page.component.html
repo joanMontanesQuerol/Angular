@@ -1,1 +1,21 @@
-<p>numbers-page works!</p>
+<p-panel [showHeader]="true" header="Pipes Numérics" class="p-1">
+  <p>Pipes incloses en Angular - Normalment al Common Module</p>
+</p-panel>
+
+<div class="grid mt-2">
+  <div class="col-12 sm:col-4">
+    <p-card header="Total venut" subheader="abans d'impostos">
+      {{(totalSells + 124) | number:'1.2-2'}}
+    </p-card>
+  </div>
+  <div class="col-12 sm:col-4">
+    <p-card header="Total venut"  subheader="després d'impostos">
+      {{(totalSells - totalSells* 0.21)  | currency: "EUR": 'symbol-narrow': '1.4-4'}}
+    </p-card>
+  </div>
+  <div class="col-12 sm:col-4">
+    <p-card header="Total venut" subheader="percentual">
+      {{percent | percent: '1.2-2'}}
+    </p-card>
+  </div>
+</div>
