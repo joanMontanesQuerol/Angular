@@ -12,7 +12,7 @@ const routes: Routes = [
     component: LayoutPageComponent,
     children: [
       {path: 'new-hero', component: NewHeroPageComponent},
-      {path: 'searh', component: SearchPageComponent},
+      {path: 'search', component: SearchPageComponent},
       {path: 'edit/:id', component: NewHeroPageComponent},
       {path: 'list', component: ListPageComponent},
       {path: ':id', component: HeroPageComponent},
