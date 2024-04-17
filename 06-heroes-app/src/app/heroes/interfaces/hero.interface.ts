@@ -8,6 +8,7 @@ export interface Hero {
   first_appearance: string;
   characters:       string;
   alt_image?:       string;
+  [key: string]:    any;
 }
 
 export enum Publisher {

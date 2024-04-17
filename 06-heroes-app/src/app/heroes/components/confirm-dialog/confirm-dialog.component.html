@@ -1,0 +1,5 @@
+<h2 mat-dialog-title>La siguiente acción es <strong>irebersible</strong>, está seguro que quiere eliminar el heroe?</h2>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close (click)="onNoClick()">Cancelar</button>
+  <button mat-flat-button [mat-dialog-close]="true" color="warn" (click)="onConfirm()" cdkFocusInitial>Borrar</button>
+</mat-dialog-actions>

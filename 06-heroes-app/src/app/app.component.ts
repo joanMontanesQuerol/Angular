@@ -5,6 +5,7 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth/service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -21,4 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class AppComponent {
   title = '06-heroes-app';
+
+  constructor(private authService:AuthService){}
+
+  ngOnInit(): void{
+    this.authService.checkAuthentication().subscribe(
+    () => {
+      console.log('checkAuthentication');
+    }
+    );
+  }
 }

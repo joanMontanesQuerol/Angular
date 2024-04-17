@@ -1,0 +1,24 @@
+<h2>Páginas</h2>
+<hr>
+
+
+<div class="col">
+  <div class="row">
+    <h3 clss="">Reactive</h3>
+    <ul class="list-group ms-4">
+      <li *ngFor="let item of reactiveMenu" class="list-group-item" [routerLink]="[item.route]" routerLinkActive="active">
+        {{item.title}}
+      </li>
+
+    </ul>
+  </div>
+  <div class="row mt-3">
+    <h3 clss="mt-3">Validaciones</h3>
+    <ul class="list-group ms-4">
+      <li *ngFor="let item of authMenu" class="list-group-item" [routerLink]="[item.route]" routerLinkActive="active">
+        {{item.title}}
+      </li>
+
+    </ul>
+  </div>
+</div>

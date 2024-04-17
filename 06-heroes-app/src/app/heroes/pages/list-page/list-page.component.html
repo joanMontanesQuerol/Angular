@@ -1,9 +1,21 @@
-<h1>Listado de Héroes</h1>
-<mat-divider></mat-divider>
+
+
+<div class="flex justify-content-between mt-4">
+  <h1>Listado de Héroes</h1>
+  <mat-divider></mat-divider>
+    <mat-form-field>
+      <mat-label>Ordenar por:</mat-label>
+      <mat-select name="sortValue" (valueChange)="changeSort()" [formControl]="name">
+          <mat-option value="bySuperhero">Nombre de Superheroe</mat-option>
+          <mat-option value="byPublisher">Publisher</mat-option>
+          <mat-option value="byName">Alter ego</mat-option>
+      </mat-select>
+  </mat-form-field>
+</div>
 
 <div class="grid bm-8 pt-2">
 
-  <div *ngFor="let hero of heroes"
+  <div *ngFor="let hero of heroes | sortBy: name.value!"
     class="col-12 sm:col-4 md:col-3 xl:col-2">
     {{hero.superhero}}
     <heroes-hero-card [hero]="hero"></heroes-hero-card>

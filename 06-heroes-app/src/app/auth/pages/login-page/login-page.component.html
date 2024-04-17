@@ -1,19 +1,18 @@
 
-<div class="flex flex-column">
+<form class="flex flex-column" [formGroup]="loginForm">
 
   <span class="text-lg mb-4">Login</span>
+    <mat-form-field>
+      <mat-label>Usuario</mat-label>
+      <input type="text" matInput placeholder="Nombre de usuario" formControlName="user">
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Usuario</mat-label>
-    <input type="text" matInput placeholder="Nombre de usuario">
-  </mat-form-field>
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input type="password" matInput placeholder="Contraseña" formControlName="password">
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Contraseña</mat-label>
-    <input type="password" matInput placeholder="Contraseña">
-  </mat-form-field>
-
-  <button mat-button mat-flat-button color="primary">
+  <button mat-button mat-flat-button color="primary" (click)="onLogin()">
     <mat-icon>done_outline</mat-icon>
     Ingresar
   </button>
@@ -23,4 +22,4 @@
     <a routerLink="/auth/new-account">¿Ya tienes cuenta?</a>
   </div>
 
-</div>
+</form>

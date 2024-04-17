@@ -12,6 +12,8 @@ import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
 import { HeroImagePipe } from './pipes/heroImage.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { SortByPipe } from './pipes/sort-by.pipe';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewHeroPageComponent,
     LayoutPageComponent,
     CardComponent,
-    HeroImagePipe
+    ConfirmDialogComponent,
+    HeroImagePipe,
+    SortByPipe
   ],
   imports: [
     CommonModule,
