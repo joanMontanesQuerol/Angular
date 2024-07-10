@@ -1,0 +1,33 @@
+#map{
+  width: 100vw;
+  height: 100vh;
+}
+
+.list-group{
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+}
+
+
+.card{
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  border:1px solid black;
+  display: inline-block;
+}
+
+button{
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}

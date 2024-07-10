@@ -1,0 +1,18 @@
+<div class="m-3">
+  <p>product works!</p>
+
+  <products-price-component
+    *ngIf="isProductVisible"
+    [price]="currentPrice"
+  />
+
+
+  <button (click)="isProductVisible = !isProductVisible">
+    Toggle
+  </button>
+
+  <button (click)="increasePrice()">
+    +1 Price
+  </button>
+</div>
+
